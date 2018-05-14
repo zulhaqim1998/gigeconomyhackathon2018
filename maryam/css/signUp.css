@@ -1,0 +1,16 @@
+.col-centered
+{
+  float: none;
+  margin: 0 auto;
+}
+
+.marg{
+  margin-top: 30px;
+}
+
+#p1{
+  font-family: 'Gamja Flower', cursive;
+  font-size: 20px;
+  text-align: left;
+ color: pink;
+}

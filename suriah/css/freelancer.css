@@ -1,0 +1,11 @@
+.col-centered
+{
+  float: none;
+  margin: 0 auto;
+}
+
+.signup
+{
+  margin-top: 30px;
+  font-size: 15px;
+}

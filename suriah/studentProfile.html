@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-ap="studentProfileApp">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GIGa-EmployerLogIn</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/signUp.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top" ng-controller="studentProfileCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">GIGa Official Website</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      </div>
+    </nav>
+
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Portfolio</h2>
+              <h3 class="section-subheading text-muted">Tell Us More About Yourself.</h3>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <div class="row">
+                  <div class="col-md-6 col-centered">
+                    <p id="p1"> Personal Information </p>
+                    <!-- fullname -->
+                    <div class="form-group">
+                      <input ng-model="form.name" class="form-control" id="name" type="text" placeholder="Fullname *" required="required" data-validation-required-message="Please enter your fullname.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- gender -->
+                    <div class="form-group">
+                      <select ng-model="form.gender" id="selectGender" class="form-control"  name="choice" required="required" data-validation-required-message="Please enter your gender.">
+                       <option selected disabled>Select gender</option>
+                      <option value = "Male">Male</option>
+                      <option value = "Female">Female</option>
+                        <p class="help-block text-danger"></p>
+                      </select>
+                    </div>
+                    <!-- age -->
+                    <div class="form-group">
+                      <input ng-model="form.age" class="form-control marg" id="age" type="number" placeholder="Age" required="required" data-validation-required-message="Please enter your birthday date.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- address -->
+                    <!-- state, city, postcode, country -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input ng-model="form.state" class="form-control " id="state" type="text" placeholder="State *" required="required" data-validation-required-message="Please enter your state."></div>
+                        <p class="help-block text-danger"></p>
+                      <div class="col-md-6">
+                        <input ng-model="city" class="form-control " id="city" type="text" placeholder="City *" required="required" data-validation-required-message="Please enter your city n."></div>
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                          <input ng-model="form.postcode" class="form-control marg " id="postcode" type="text" placeholder="Postcode *" required="required" data-validation-required-message="Please enter your postcode."></div>
+                          <p class="help-block text-danger"></p>
+                        <div class="col-md-6">
+                          <input class="form-control marg " id="country" type="text" placeholder="Country *" required="required" data-validation-required-message="Please enter your country."></div>
+                          <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- university -->
+                    <div class="form-group">
+                      <input ng-model="form.university" class="form-control marg" id="university" type="text" placeholder="University *" required="required" data-validation-required-message="Please enter your university.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- course -->
+                    <div class="form-group">
+                      <input ng-model="form.course" class="form-control marg" id="course" type="text" placeholder="Course taken *" required="required" data-validation-required-message="Please enter your course.">
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- category -->
+                    <div class="form-group">
+
+                      <select ng-model="form.category" class="form-control marg"  name="choice" required="required" data-validation-required-message="Please enter your gender.">
+                       <option selected disabled>Select Category Job</option>
+                      <option value = "Accounting/Finance">Accounting / Finance</option>
+                      <option value = "Art/Media/Communications">Art / Media / Communications</option>
+                      <option value = "Computer/Information Technology">Computer & Information Technology</option>
+                      <option value = "Education/Training">Education & Training</option>
+                      <option value = "Engineering">Engineering</option>
+                        <option value = "HealthCare">HealthCare</option>
+                        <option value = "Hospitality">Hospitality</option>
+                        <option value = "Sales/Marketing">Sales & Marketing</option>
+                        <option value = "Sciences">Sciences</option>
+                        <option value = "Services">Services</option>
+                        <option value = "InstrumentalMusician">Instrumental Musician</option>
+                      </select>
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- experience -->
+
+                      <div ng-model="form.message" class="form-group marg">
+                        <textarea class="form-control marg" id="message" placeholder="Experience *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                        <p class="help-block text-danger"></p>
+                      </div>
+
+                    <!-- about me -->
+                    <div class="form-group marg">
+                        <textarea ng-model="form.about" class="form-control marg" id="message" placeholder="About me *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <p id="p1"> Contact Information </p>
+                    <!-- phone number -->
+                    <div class="form-group">
+                      <input ng-model="form.phone" class="form-control marg" id="phone" type="text" placeholder="Phone Number *" >
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- facebook -->
+                    <div class="form-group">
+                      <input ng-model="phone.facebook" class="form-control marg" id="facebook" type="text" placeholder="Facebook Account *" >
+                      <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- twitter -->
+                    <div class="form-group">
+                      <input ng-model="form.twitter" class="form-control marg" id="twitter" type="text" placeholder="Twitter Account *" >
+                      <p class="help-block text-danger"></p>
+                    </div>
+
+
+                  <div class="clearfix"></div>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"></div>
+                    <a ng-click="handleButtonClick()" id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" href="././one-page-resume-template-v.1/index2.html">Sign Up</a>
+                  <div class="col-lg-12 text-center"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        const studentProfileApp = angular.module("studentProfileApp", []);
+
+        studentProfileApp.controller("studentProfileCtrl", function ($scope, $http) {
+            $scope.form = {};
+
+            $scope.handleButtonClick = function() {
+                // var data;
+                // for(let i = 0; i < form.length; i++){
+                //     $http.put("/api/user/5af696bd49a4970864f1dab2", form[i])
+                //         .then(function(res) {
+                //             data = res.data;
+                //             console.log("Data saved:" + form[i]);
+                //         });
+                // }
+                // window.location.href = "./one-page-resume-template-v.1/index2.html";
+            }
+
+
+        });
+
+
+
+    </script>
+  </body>
+</html>
